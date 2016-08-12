@@ -1,0 +1,12 @@
+DESCRIPTION=Makes ai still use abilities despite suppression
+//verified one copy
+UPK_FILE=XComGame.upk
+OBJECT=XGAIAbilityRules.IsValidOption
+[BEFORE_HEX]
+//if(kUnit.IsBeingSuppressed() || kBehavior.m_kAbilityDM.m_bShouldAvoidMovement)
+07 FA 0A 84 19 00 74 9B 00 00 0A 00 EB 35 00 00 00 1B 7D 44 00 00 00 00 00 00 16 18 35 00 19 19 00 70 9B 00 00 09 00 A5 9C 00 00 00 01 A5 9C 00 00 0A 00 E2 99 00 00 00 2D 01 E2 99 00 00 16
+
+[AFTER_HEX]
+//changed to and
+//if(kUnit.IsBeingSuppressed() && kBehavior.m_kAbilityDM.m_bShouldAvoidMovement)
+07 FA 0A 82 19 00 74 9B 00 00 0A 00 EB 35 00 00 00 1B 7D 44 00 00 00 00 00 00 16 18 35 00 19 19 00 70 9B 00 00 09 00 A5 9C 00 00 00 01 A5 9C 00 00 0A 00 E2 99 00 00 00 2D 01 E2 99 00 00 16

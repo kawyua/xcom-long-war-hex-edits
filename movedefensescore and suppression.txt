@@ -1,0 +1,13 @@
+DESCRIPTION=Change the actual game tactical sense numbers to negative
+
+UPK_FILE=XComGame.upk
+OBJECT=XGAIBehavior.GetMoveDefenseScore
+[BEFORE_HEX]
+//if(m_kUnit.IsBeingSuppressed() || m_kAbilityDM.m_bShouldAvoidMovement)
+07 D5 00 84 19 01 AA 9C 00 00 0A 00 EB 35 00 00 00 1B 7D 44 00 00 00 00 00 00 16 18 20 00 19 01 A5 9C 00 00 0A 00 E2 99 00 00 00 2D 01 E2 99 00 00 16
+
+
+[AFTER_HEX]
+//if(m_kUnit.IsBeingSuppressed() && m_kAbilityDM.m_bShouldAvoidMovement)
+07 D5 00 82 19 01 AA 9C 00 00 0A 00 EB 35 00 00 00 1B 7D 44 00 00 00 00 00 00 16 18 20 00 19 01 A5 9C 00 00 0A 00 E2 99 00 00 00 2D 01 E2 99 00 00 16
+

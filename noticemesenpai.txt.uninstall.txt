@@ -1,0 +1,18 @@
+MOD_NAME=C:\Users\yasukiyo.yukawa\Desktop\games\games done with\PatcherGUI v 7_3-448-7-3\PatcherGUI\Mods\suppressionattempts\noticemesenpai.txt uninstall script
+AUTHOR=PatchUPK
+DESCRIPTION=This is automatically generated uninstall script. Do not change anything!
+
+UPK_FILE=xcomgame.upk
+
+OBJECT=XGUnit.GetSuppressingEnemies
+
+REL_OFFSET=55
+
+[MODDED_HEX]
+07 96 00 96 00 0C C8 00 00 2C 10 16 
+
+
+
+
+
+{ backup script end }
