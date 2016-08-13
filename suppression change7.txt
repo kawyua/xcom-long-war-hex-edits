@@ -1,0 +1,9 @@
+DESCRIPTION=attempt 7
+UPK_FILE=XComGame.upk
+OBJECT=XGAIPlayer.CollectTargetEnemies
+[BEFORE_HEX]
+07 D9 00 9A 46 01 32 D4 00 00 0A 00 00 4C A9 00 00 16 1D FF FF FF FF 16
+//if(m_arrValidTargets.Find(kEnemy) == -1)
+[AFTER_HEX]
+07 D9 00 96 46 01 32 D4 00 00 0A 00 00 4C A9 00 00 16 1D FF FF FF FF 16
+//if(m_arrValidTargets.Find(kEnemy) < -1)

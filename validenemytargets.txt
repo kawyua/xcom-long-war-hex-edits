@@ -1,0 +1,13 @@
+DESCRIPTION=allowing aliens to kill suppressed low health enemies
+UPK_FILE=XComGame.upk
+OBJECT=XGAIPlayer.IsValidEnemyTarget
+[BEFORE_HEX]
+07 02 01 82 19 00 48 A9 00 00 0A 00 EB 35 00 00 00 1B 7D 44 00 00 00 00 00 00 16 18 1F 00 1B 6B 44 00 00 00 00 00 00 00 48 A9 00 00 10 25 01 31 D4 00 00 16 16 
+//if(kEnemy.IsBeingSuppressed() && IsAtLowHealth(kEnemy, m_arrCachedSquad[0]))
+04 28
+//return false
+[AFTER_HEX]
+07 02 01 82 19 00 48 A9 00 00 0A 00 EB 35 00 00 00 1B 7D 44 00 00 00 00 00 00 16 18 1F 00 1B 6B 44 00 00 00 00 00 00 00 48 A9 00 00 10 25 01 31 D4 00 00 16 16 
+//if(kEnemy.IsBeingSuppressed() && IsAtLowHealth(kEnemy, m_arrCachedSquad[0]))
+04 27
+//return true
