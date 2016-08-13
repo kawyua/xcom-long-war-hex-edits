@@ -1,0 +1,17 @@
+DESCRIPTION= mechtoid more likely to move for shots above 40% with a single person there
+UPK_FILE=XComGame.upk
+OBJECT=XGAIBehavior_Mechtoid.ShouldAvoidMovement
+[BEFORE_HEX]
+07 5D 01 97 00 69 A4 00 00 2C 0F 16 
+//if(iCurrHitChance > 15)
+A5 00 6A A4 00 00 16 
+//++ nAttackableEnemies
+07 5D 01 97 00 6A A4 00 00 26 16
+//if(nAttackableEnemies > 1)
+[AFTER_HEX]
+07 5D 01 97 00 69 A4 00 00 2C 19 16 
+//if(iCurrHitChance > 25)
+A5 00 6A A4 00 00 16 
+//++ nAttackableEnemies
+07 5D 01 97 00 6A A4 00 00 25 16
+//if(nAttackableEnemies > 0)
